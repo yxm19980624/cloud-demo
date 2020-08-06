@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * @Author: yxm
- * @Date: 2020/8/5 22:02热热dd
+ * @Date: 2020/8/5 22:02
  */
 @Data
 @AllArgsConstructor
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class CommonResult<T> {
 
     private Integer code;
-    //测试
+
     private String message;
 
     private T data;
