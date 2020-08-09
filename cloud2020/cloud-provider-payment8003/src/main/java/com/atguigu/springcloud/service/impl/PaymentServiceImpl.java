@@ -3,9 +3,7 @@ package com.atguigu.springcloud.service.impl;
 import com.atguigu.springcloud.dao.PaymentDao;
 import com.atguigu.springcloud.entity.Payment;
 import com.atguigu.springcloud.service.PaymentService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.annotation.Resource;
 
