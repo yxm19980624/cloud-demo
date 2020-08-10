@@ -4,6 +4,7 @@ import com.atguigu.springcloud.entity.CommonResult;
 import com.atguigu.springcloud.entity.Payment;
 import com.atguigu.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -14,11 +15,13 @@ import javax.annotation.Resource;
  */
 @RestController
 @Slf4j
+@EnableDiscoveryClient
 public class PaymentController {
     @Resource
     private PaymentService paymentService;
 
     @PostMapping(value = "/payment/create")
+//    @RequestBody 需要加在payment上面
     public CommonResult create(@RequestBody Payment payment){
         int result = paymentService.create(payment);
         log.info("****插入结果****"+result);

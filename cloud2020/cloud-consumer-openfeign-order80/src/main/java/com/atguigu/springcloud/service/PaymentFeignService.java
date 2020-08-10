@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  * @Author: yxm
- * @Date: 2020/8/8 17:37
+ * @Date: 2020/8/7 9:54
  */
 @Component
-@FeignClient(value = "cloud-provider-payment8001")
+@FeignClient(value = "cloud-payment-service")   //服务提供者的application name
 public interface PaymentFeignService {
+
+    @GetMapping(value = "/payment/get/{id}")
+    CommonResult getPaymentById(@PathVariable("id") Long id);
 
     @PostMapping(value = "/payment/create")
     CommonResult create(Payment payment);
-
-    @GetMapping(value = "/payment/get/{id}")
-    CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
 }

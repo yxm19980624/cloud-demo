@@ -16,12 +16,12 @@ public class PaymentServiceImpl implements PaymentService{
     @Resource
     private PaymentDao paymentDao;
 
-    public int create( Payment payment){
+    public int create(Payment payment){
         return paymentDao.create(payment);
-    }
+    };
 
     public Payment getPaymentById(Long id){
         return paymentDao.getPaymentById(id);
-    }
+    };
 
 }

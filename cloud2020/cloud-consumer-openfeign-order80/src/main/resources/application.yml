@@ -7,9 +7,13 @@ spring:
     consul:
       host: localhost
       port: 8500
-      discovery:
-        service-name: ${spring.application.name}
-#        openFeign日志处理
+#      discovery:
+#        register: false # 不进行注册
+#        health-check-url: /actuator/health
+#        heartbeat:
+#          enabled: true
+
+#日志升级
 logging:
   level:
     com.atguigu.springcloud.service.PaymentFeignService: debug

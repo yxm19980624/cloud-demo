@@ -5,7 +5,6 @@ import com.atguigu.springcloud.entity.Payment;
 import com.atguigu.springcloud.service.PaymentService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.annotation.Resource;
 
@@ -18,12 +17,12 @@ public class PaymentServiceImpl implements PaymentService{
     @Resource
     private PaymentDao paymentDao;
 
-    public int create( Payment payment){
+    public int create(Payment payment){
         return paymentDao.create(payment);
-    }
+    };
 
     public Payment getPaymentById(Long id){
         return paymentDao.getPaymentById(id);
-    }
+    };
 
 }
