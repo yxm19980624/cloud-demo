@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  * @Author: yxm
- * @Date: 2020/8/7 9:54
+ * @Date: 2020/8/8 17:37
  */
+
 @Component
 @FeignClient(value = "cloud-payment-service")   //服务提供者的application name
 public interface PaymentFeignService {
@@ -21,4 +22,4 @@ public interface PaymentFeignService {
 
     @PostMapping(value = "/payment/create")
     CommonResult create(Payment payment);
-}
+    }

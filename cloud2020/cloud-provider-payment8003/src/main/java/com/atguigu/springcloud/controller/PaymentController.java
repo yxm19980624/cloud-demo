@@ -21,10 +21,9 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping(value = "/payment/create")
-//    @RequestBody 需要加在payment上面
     public CommonResult create(@RequestBody Payment payment){
         int result = paymentService.create(payment);
-        log.info("****插入结果 payment8002 ****"+result);
+        log.info("****插入结果 payment8003 ****"+result);
         if (result > 0){
             return new CommonResult(200,"插入数据成功！",result);
         }else{
@@ -35,7 +34,7 @@ public class PaymentController {
     @GetMapping(value = "/payment/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id){
         Payment payment = paymentService.getPaymentById(id);
-        log.info("****查询结果 payment8002 ****"+payment);
+        log.info("****查询结果 payment8003 ****"+payment);
         if (payment != null) {
             return new CommonResult(200,"查询成功！",payment);
         }else{
