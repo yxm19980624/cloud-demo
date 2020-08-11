@@ -17,6 +17,7 @@
       <module>cloud-consumer-openfeign-order80</module>
     <module>cloud-provider-payment8003</module>
       <module>cloud-provider-payment8002</module>
+      <module>cloud-gateway8080</module>
   </modules>
 
   <!-- 统一管理jar包版本 -->
